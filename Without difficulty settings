@@ -1,0 +1,23 @@
+
+#while loop (always true)
+b=1
+while b==1:
+    #random module
+    import random 
+    n = random.randint(1,5000)
+    #taking input
+    a=input("guess a number 1-5000: ")
+    #deciding if its correct or not
+    if int(a) > int(n):
+       print("its less than that")
+    if int(a) < int(n):
+      print("its more than that")
+    if int(a) == int(n):   
+      print("wow you got it right")
+      #asking to continue or break the program
+    c=input("type 'again' to play again and 'stop' to stop the program: ")
+    if c==("again"):
+      continue
+    if c==("stop"):
+      break   
+
