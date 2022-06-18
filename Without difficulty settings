@@ -11,7 +11,7 @@ while b==1:
 #While loop (inside)
   while b==1:
 
-     a=input("guess a number 1-5000: ")
+     a=input("guess a number: ")
 #Deciding if the input is higher, lower or correct.
      if int(a) > int(n):
        print("its less than that")
