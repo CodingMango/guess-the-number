@@ -1,23 +1,31 @@
-
-#while loop (always true)
+import random 
+#While loop (outside)
 b=1
 while b==1:
-    #random module
-    import random 
-    n = random.randint(1,5000)
-    #taking input
-    a=input("guess a number 1-5000: ")
-    #deciding if its correct or not
-    if int(a) > int(n):
-       print("its less than that")
-    if int(a) < int(n):
-      print("its more than that")
-    if int(a) == int(n):   
-      print("wow you got it right")
-      #asking to continue or break the program
-    c=input("type 'again' to play again and 'stop' to stop the program: ")
-    if c==("again"):
-      continue
-    if c==("stop"):
-      break   
+#Taking input for difficulty. (f x 1000 = max number)
+  f=input("Type 1, 2, 3, etc for difficulty: ")
+  e=int(f)*1000
+#Random module. (1, fx1000)
+  n = random.randint(1,int(e))
+#  print(n)
+#While loop (inside)
+  while b==1:
 
+     a=input("guess a number 1-5000: ")
+#Deciding if the input is higher, lower or correct.
+     if int(a) > int(n):
+       print("its less than that")
+       continue
+     if int(a) < int(n):
+      print("its more than that")
+      continue
+     if int(a) == int(n):   
+      print("wow you got it right")
+#Breaking the inside loop once the player gets it right
+      break
+#Asking to play again (start from the difficulty input again) or to break the loop     
+  c=input("type 'again' to play again and 'stop' to stop the program: ")
+  if c==("again"):
+     continue 
+  if c==("stop"):
+      break   
